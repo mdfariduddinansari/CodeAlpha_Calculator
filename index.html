@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculator</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="flex justify-center items-center min-h-screen">
+  <div class="glass shadow-2xl rounded-[2rem] w-[380px] max-w-[90%] overflow-hidden">
+    <div class="bg-gray-900 text-white p-6 h-40 flex flex-col justify-end overflow-x-auto rounded-t-[2rem]">
+      <div id="prev" class="text-sm text-gray-400 whitespace-nowrap"></div>
+      <div id="curr" class="text-4xl font-mono whitespace-nowrap">0</div>
+    </div>
+    <div class="grid grid-cols-4 gap-4 p-6 bg-white rounded-b-[2rem]">
+      <button class="bg-pink-500 text-white rounded-2xl py-4 font-semibold hover:scale-105 transition" onclick="clearCalc()">AC</button>
+      <button class="bg-rose-400 text-white rounded-2xl py-4 font-semibold hover:scale-105 transition" onclick="delChar()">DEL</button>
+      <button class="bg-purple-500 text-white rounded-2xl py-4 font-semibold hover:scale-105 transition" onclick="appendChar('(')">(</button>
+      <button class="bg-purple-500 text-white rounded-2xl py-4 font-semibold hover:scale-105 transition" onclick="appendChar(')')">)</button>
+      <button class="btn" onclick="appendChar('7')">7</button>
+      <button class="btn" onclick="appendChar('8')">8</button>
+      <button class="btn" onclick="appendChar('9')">9</button>
+      <button class="op" onclick="setOp('/')">/</button>
+      <button class="btn" onclick="appendChar('4')">4</button>
+      <button class="btn" onclick="appendChar('5')">5</button>
+      <button class="btn" onclick="appendChar('6')">6</button>
+      <button class="op" onclick="setOp('*')">×</button>
+      <button class="btn" onclick="appendChar('1')">1</button>
+      <button class="btn" onclick="appendChar('2')">2</button>
+      <button class="btn" onclick="appendChar('3')">3</button>
+      <button class="op" onclick="setOp('-')">−</button>
+      <button class="btn col-span-2" onclick="appendChar('0')">0</button>
+      <button class="btn" onclick="appendChar('.')">.</button>
+      <button class="op" onclick="setOp('+')">+</button>
+      <button class="col-span-4 bg-emerald-500 text-white rounded-2xl py-4 font-bold text-xl hover:scale-105 transition" onclick="evaluateExpr()">=</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+/* Background and font */
+body {
+  background: linear-gradient(135deg, #72bfe0, #203a43, #2c5364); /* Dark tech gradient */
+  font-family: 'Segoe UI', sans-serif;
+  color: #050000;
+}
+
+/* Hide scrollbar in display */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Calculator container glass effect */
+.glass {
+  background: rgba(30, 41, 59, 0.8); /* dark blue-gray with transparency */
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Display panel styling */
+#curr {
+  font-weight: 700;
+  color: #f1f5f9; /* light slate */
+}
+
+#prev {
+  color: #94a3b8; /* slate-400 */
+}
+
+.btn {
+  @apply bg-gray-800 text-white rounded-2xl py-4 font-semibold text-lg hover:scale-105 hover:bg-gray-700 transition;
+}
+
+/* Operator buttons */
+.op {
+  @apply bg-blue-600 text-white rounded-2xl py-4 font-bold text-lg hover:scale-105 hover:bg-blue-700 transition;
+}
+
+/* Top utility buttons: AC, DEL, etc. */
+.bg-pink-500 {
+  background-color: #0f5c1f !important; /* Red */
+}
+.bg-rose-400 {
+  background-color: #f97316 !important; /* Orange */
+}
+.bg-purple-500 {
+  background-color: #2563eb !important; /* Blue */
+}
+.bg-emerald-500 {
+  background-color: #fb0303 !important; /* Red */
+}
+.hover\\:scale-105:hover {
+  transform: scale(1.05);
+}
